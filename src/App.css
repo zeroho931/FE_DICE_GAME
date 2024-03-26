@@ -1,0 +1,127 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right bottom, #ff69b4, #800000);
+  z-index: -1;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.player {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.player.active {
+  border: 4px solid #000; /* 현재 턴인 플레이어의 박스에 굵은 보더 추가 */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* 현재 턴인 플레이어의 박스에 그림자 효과 추가 */
+}
+
+.player-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.game-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+}
+
+.btn-new,
+.btn-roll,
+.btn-hold {
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-new:hover,
+.btn-roll:hover,
+.btn-hold:hover {
+  background-color: #ddd;
+}
+
+.game-over {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dice {
+  width: 50px;
+  height: 50px;
+  margin: 20px auto;
+}
+
+.dice-face {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #000;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.dot {
+  width: 20%;
+  height: 20%;
+  background-color: #000;
+  border-radius: 50%;
+  margin: 5%;
+}
+
+.dice {
+  width: 50px;
+  height: 50px;
+  margin: 20px auto 0; /* 주사위의 margin-top을 0으로 조정하여 위로 이동 */
+}
+.wrapper {
+  display: flex;
+  flex-direction: column; /* wrapper를 세로 방향으로 배치 */
+  align-items: center; /* 가운데 정렬 */
+}
+
+.game-controls {
+  margin-top: 20px; /* 버튼 그룹과의 간격 조절 */
+}
+
+.dice {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 20px; /* 주사위와 버튼 그룹 사이의 간격 조절 */
+}
